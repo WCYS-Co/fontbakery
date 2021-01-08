@@ -22,17 +22,7 @@ async function run() {
   // Install fontbakery
   // ==================
   try {
-    if (fbVersion === "latest") {
-      await exec.exec("python -m pip install --upgrade fontbakery");
-    } else if (fbVersion === "master") {
-      await exec.exec(
-        "python -m pip install --upgrade git+https://github.com/googlefonts/fontbakery.git"
-      );
-    } else {
-      await exec.exec(
-        `python -m pip install --upgrade fontbakery==${fbVersion}`
-      );
-    }
+    await exec.exec("python -m pip install fontbakery==0.7.31");
     // Show the installed version
     console.log("");
     console.log("Dependency versions after fontbakery installation:");
