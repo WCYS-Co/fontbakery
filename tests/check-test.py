@@ -15,7 +15,7 @@ excluded_check_ids = ()
 @check(
     id="com.factions/tests/alwayspass",
     rationale="""
-    A test check for CI testing of the f-actions/font-bakery GitHub
+    A test check for CI testing of the wcys-co/fontbakery GitHub
     Action
     """,
 )

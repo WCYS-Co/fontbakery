@@ -1,10 +1,10 @@
-# f-actions/font-bakery GitHub Action
+# wcys-co/fontbakery GitHub Action
 
-![Version](https://img.shields.io/github/v/release/f-actions/font-bakery?sort=semver)
-[![Action CI](https://github.com/f-actions/font-bakery/workflows/Action%20CI/badge.svg)](https://github.com/f-actions/font-bakery/actions?query=workflow%3A%22Action+CI%22)
-[![Lint](https://github.com/f-actions/font-bakery/workflows/Lint/badge.svg)](https://github.com/f-actions/font-bakery/actions?query=workflow%3ALint)
+![Version](https://img.shields.io/github/v/release/wcys-co/fontbakery?sort=semver)
+[![Action CI](https://github.com/wcys-co/fontbakery/workflows/Action%20CI/badge.svg)](https://github.com/wcys-co/fontbakery/actions?query=workflow%3A%22Action+CI%22)
+[![Lint](https://github.com/wcys-co/fontbakery/workflows/Lint/badge.svg)](https://github.com/wcys-co/fontbakery/actions?query=workflow%3ALint)
 
-This GitHub Action installs the [googlefonts/fontbakery](https://github.com/googlefonts/fontbakery/) typeface project quality assurance tool and executes the tool on a user-specified filepath as part of a remote continuous integration testing pipeline.  The Action requires a Python v3.6+ runner environment.
+This GitHub Action installs the [`googlefonts/fontbakery@0.7.31`](https://github.com/googlefonts/fontbakery/) typeface project quality assurance tool and executes the tool on a user-specified filepath as part of a remote continuous integration testing pipeline.  The Action requires a Python v3.6+ runner environment.
 
 ## Quick Start
 
@@ -33,14 +33,14 @@ jobs:
       - name: Build fonts
         run: make  # enter your build shell commands here
       - name: fontbakery TTF checks
-        uses: f-actions/font-bakery@v1
+        uses: wcys-co/fontbakery@v1
         with:
           subcmd: "check-universal"  # fontbakery sub-command
           args: "--loglevel WARN"  # optional arguments to fontbakery
           path: "path/to/*.ttf"  # font path relative to root of repository
           version: "latest"  # optional, latest PyPI release is default
       - name: fontbakery OTF checks
-        uses: f-actions/font-bakery@v1
+        uses: wcys-co/fontbakery@v1
         with:
           subcmd: "check-universal"  # fontbakery sub-command
           args: "--loglevel WARN"  # optional arguments to fontbakery
