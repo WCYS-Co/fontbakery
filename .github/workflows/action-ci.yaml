@@ -51,4 +51,4 @@ jobs:
           subcmd: "check-profile"
           args: "tests/check-test.py"
           path: "tests/*.ttf"
-          version: "0.7.25"
+          version: "0.7.31"
